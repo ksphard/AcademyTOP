@@ -1,14 +1,9 @@
-# Ввод номера месяца
-month = int(input("Введите номер месяца: "))
-
-# Определение времени года
-if month in (12, 1, 2):
-    print("Зима")
-elif month in (3, 4, 5):
-    print("Весна")
-elif month in (6, 7, 8):
-    print("Лето")
-elif month in (9, 10, 11):
-    print("Осень")
-else:
-    print("Ошибка ввода данных")
+start = int(input("Введите начало диапозон: "))
+end = int(input("Введите конец диапозона: "))
+summa = 0
+current = start
+while current <= end:
+    if current %2 !=0:
+        summa = summa + current
+    current = current + 1
+print("Сумма целых нечетных чисел:", summa)

@@ -1,18 +1,13 @@
+start = int(input("Введите начало диапазона: "))
+end = int(input("Введите конец диапазона: "))
 
-a = float(input("Введите первую сторону: "))
-b = float(input("Введите вторую сторону: "))
-c = float(input("Введите третью сторону: "))
+summa = 0
 
+if start % 2 == 0:
+    start += 1
 
-if a + b <= c or a + c <= b or b + c <= a:
-    print("Такой треугольник не существует")
+while start <= end:
+    summa += start
+    start += 2
 
-
-elif a == b == c:
-    print("Треугольник равносторонний")
-
-elif a == b or a == c or b == c:
-    print("Треугольник равнобедренный")
-
-else:
-    print("Треугольник разносторонний")
+print("Сумма нечетных чисел =", summa)
